@@ -13,5 +13,4 @@ Using [official](https://reactjs.org/docs/) documentation
 ### 1. Hello World
 
 - A simple hello world app using react.
-- `git checkout hello-world`
--
+- `git checkout hello-world`.
