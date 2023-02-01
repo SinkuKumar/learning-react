@@ -145,3 +145,42 @@ For example, class becomes className in JSX, and tabindex becomes tabIndex.
 ##### Tip:
 
 React recommends using the “Babel” language definition for your editor of choice so that both ES6 and JSX code is properly highlighted.
+
+### 3. Rendering Elements
+
+- Elements are the smallest building blocks of React apps.
+- An element desribes what you want to see on the screen.
+
+#### Rendering an Element into the DOM
+
+- Same as rendering hello world.
+
+#### Updating the Rendered Element
+
+- React elements are immutable. The only way to update the UI is to create a new element, and pass it to `root.render()`.
+
+  ```jsx
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+
+  function tick() {
+    const element = (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {new Date().toLocaleTimeString()}.</h2>
+      </div>
+    );
+    root.render(element);
+  }
+
+  setInterval(tick, 1000);
+  ```
+
+##### Note:
+
+In practice, most React apps only call root.render() once. In the next sections we will learn how such code gets encapsulated into stateful components.
+
+We recommend that you don’t skip topics because they build on each other.
+
+#### React Only Updates What's Necessary
+
+- React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.
